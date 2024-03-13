@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه معتبر خرید محصولات آرایشی و بهداشتی و عطر | روژا شاپ</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/iranyekan">
+    <style>
+        .add-to-basket {
+            border: none;
+            padding: 5%;
+            background: #ff0869;
+            color: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header col-12 col-sm-12 position-relative">
+        <div class="top col-12 col-sm-12 px-4 d-flex flex-row align-items-center justify-content-between">
+            <div class="right col-6 d-flex flex-row align-items-center">
+                <a href="home.html">
+                    <img class="w-100 p-3" src="assets/img/logo.png" alt="logo" title="logo">
+                </a>
+                <div class="search-input w-100">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="جستجوی نام محصول, دسته بندی و ..."
+                            aria-label="Search">
+                    </form>
+                </div>
+            </div>
+            <div class="left col-2 d-flex flex-row align-items-center justify-content-end">
+                <div class="login-btn p-3 py-2">
+                    <a class="button text-decoration-none text-black text-nowrap" href="#">ورود / عضویت </a>
+                </div>
+                <div class="basket-btn p-3 py-2 me-3 position-relative">
+                    <a class="button text-decoration-none text-black" data-bs-toggle="offcanvas"
+                        href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
+                            class="bi bi-basket2-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1" />
+                        </svg>
+                        <span
+                            class="position-absolute top-100 start-100 translate-middle px-2 py-1 badge text-bg-dark" id="basketCount">0</span>
+                    </a>
+                    <!-- off canvas for basket  -->
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                        aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body offcanvas-basket d-flex flex-column justify-content-between">
+                            <div class="products-section col-12 col-sm-12">
+                                <div class="all col-12 col-sm-12" id="basketBody">
+                                    <!-- <div class="each p-1 d-flex flex-row align-items-center justify-content-between">
+                                        <div class="right p-1 col-3">
+                                            <img class="w-100" src="assets/img/category-1-1.jpeg" title="" alt="">
+                                        </div>
+                                        <div class="middle p-1 col-5 d-flex flex-column align-items-start">
+                                            <span class="title fs-6">lorep ipson felan</span>
+                                            <del id="oldPrice">1350000 تومان</del>
+                                            <span id="newPrice">1050000 تومان</span>
+                                        </div>
+                                        <div class="left p-1 d-flex flex-column align-items-start">
+                                            <span class="mx-1 mb-1">تعداد: </span>
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <select class="form-select mx-1" aria-label="Default select example">
+                                                    <option selected value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
+                                                <a class="text-decoration-none mx-1 text-black">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-trash3-fill red"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div
+                                class="calculation-section col-12 col-sm-12 d-flex flex-row justify-content-between align-items-center">
+                                <div class="right p-1 col-6 col-sm-6 d-flex flex-column align-items-start">
+                                    <span>تعداد اقلام : </span>
+                                    <span id="totalCount"></span>
+                                    <span>تخفیف : </span>
+                                    <span id="totalDiscount"></span>
+                                    <span>قابل پرداخت : </span>
+                                    <span id="totalPrice"></span>
+                                </div>
+                                <div class="left p-1 col-6 text-start">
+                                    <a href="#" class="text-decoration-none button red">
+                                        نهایی کردن خرید
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="bottom col-12 col-sm-12 px-4">
+            <nav class="navbar navbar-expand-lg">
+                <div class="w-100">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="">
+                        <ul
+                            class="navbar-nav p-0 mb-2 mb-lg-00 d-flex flex-row align-items-center justify-content-between">
+                            <div class="right d-flex flex-row align-items-center justify-content-end">
+                                <li class="nav-item d-flex flex-row align-items-center ms-2" id="productsMenu">
+                                    <a class="nav-link red" href="#">
+                                        دسته بندی محصولات
+                                    </a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                        class="bi bi-caret-down red" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659" />
+                                    </svg>
+                                </li>
+                                <div class="vr"></div>
+                                <!--  -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"
+                                            fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                                            <path
+                                                d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
+                                        </svg>
+                                        <span>
+                                            برندها
+                                        </span>
+                                    </a>
+                                </li>
+                                <div class="vr"></div>
+                                <!--  -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"
+                                            fill="currentColor" class="bi bi-gift" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 14.5V7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zM1 4v2h6V4zm8 0v2h6V4zm5 3H9v8h4.5a.5.5 0 0 0 .5-.5zm-7 8V7H2v7.5a.5.5 0 0 0 .5.5z" />
+                                        </svg>
+                                        <span>کارت هدیه روژا</span>
+                                    </a>
+                                </li>
+                                <div class="vr"></div>
+                                <!--  -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                                            <path
+                                                d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9 9 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.4 10.4 0 0 1-.524 2.318l-.003.011a11 11 0 0 1-.244.637c-.079.186.074.394.273.362a22 22 0 0 0 .693-.125m.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6-3.004 6-7 6a8 8 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a11 11 0 0 0 .398-2" />
+                                        </svg>
+                                        <span>مشاوره رایگان</span>
+                                    </a>
+                                </li>
+                                <div class="vr"></div>
+                                <!--  -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z" />
+                                            <path
+                                                d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z" />
+                                        </svg>
+                                        <span>فروش سازمانی</span>
+                                    </a>
+                                </li>
+                                <div class="vr"></div>
+                                <!--  -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
+                                            <path
+                                                d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                                        </svg>
+                                        <span>وبلاگ روژا</span>
+                                    </a>
+                                </li>
+                                <div class="vr"></div>
+                                <!--  -->
+                                <li class="nav-item ">
+                                    <a class="nav-link red" href="#">
+                                        فروش ویژه روژا
+                                    </a>
+                                </li>
+                            </div>
+                            <!--  -->
+                            <div class="left d-flex flex-row align-items-center justify-content-start">
+                                <li class="nav-item">
+                                    <a class="nav-link " href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-people red" viewBox="0 0 16 16">
+                                            <path
+                                                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
+                                        </svg>
+                                        <span>باشگاه مشتریان</span>
+                                    </a>
+                                </li>
+                                <div class="vr"></div>
+                                <!--  -->
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-geo-alt red" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                                            <path
+                                                d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                        </svg>
+                                        <span>شعب روژا</span>
+                                    </a>
+                                </li>
+                            </div>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="megamenu-area col-10 bg-light z-3 d-flex flex-row position-absolute top-100 visually-hidden">
+            <div class="menu col-2 bg-white d-flex flex-column align-items-start p-4">
+                <a class="first text-decoration-none text-black my-3" id="menuCategory1" href="#">
+                    <span class="text-black">عطر</span>
+                </a>
+                <a class="second text-decoration-none text-black my-3" id="menuCategory2" href="#">
+                    <span class="text-black">بهداشتی</span>
+                </a>
+                <a class="third text-decoration-none text-black my-3" id="menuCategory3" href="#">
+                    <span class="text-black">آرایشی</span>
+                </a>
+                <a class="third text-decoration-none text-black my-3" id="menuCategory3" href="./products.html">
+                    <span class="red" id="allProductsLink">تمام محصولات</span>
+                </a>
+            </div>
+            <div class="submenu col-10 p-4">
+                <div class="first col-12 d-flex flex-column align-items-start fw-light" id="submenu1">
+                    <a class="text-decoration-none text-black my-2" href="#">
+                        <strong>عطر و ادکلن</strong>
+                    </a>
+                    <a class="text-decoration-none text-black my-2" href="#">
+                        <span>عطر و ادکلن مردانه</span>
+                    </a>
+                    <a class="text-decoration-none text-black my-2" href="#">
+                        <span>عطر و ادکلن زنانه</span>
+                    </a>
+                    <a class="text-decoration-none text-black my-2" href="#">
+                        <span>عطر و ادکلن زنانه و مردانه</span>
+                    </a>
+                    <a class="text-decoration-none text-black my-2" href="#">
+                        <span>عطر و ادکلن بچه‌گانه</span>
+                    </a>
+                    <a class="text-decoration-none text-black my-2" href="#">
+                        <strong>گیفت ست عطر</strong>
+                    </a>
+                    <a class="text-decoration-none text-black my-2" href="#">
+                        <strong>خوشبو کننده بدن</strong>
+                    </a>
+                    <a class="text-decoration-none text-black my-2" href="#">
+                        <span>اسپری</span>
+                    </a>
+                    <a class="text-decoration-none text-black my-2" href="#">
+                        <span>بادی اسپلش</span>
+                    </a>
+                    <a class="text-decoration-none text-black my-2" href="#">
+                        <strong>عطریاب</strong>
+                    </a>
+                </div>
+                <div class="second col-12 d-flex flex-wrap align-items-start fw-light visually-hidden" id="submenu2">
+                    <a class="col-2 col-sm-2 text-decoration-none text-black my-2" href="#">
+                        <strong>مراقبت از صورت</strong>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>کرم روز</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>کرم شب</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>کرم دور چشم</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>لایه بردار</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>ضد چروک و افتادگی</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>ضد لک و روشن کننده</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>ماسک و اسکراب</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>درمان جوش و منافذ باز</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>پاک کننده و شوینده</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>سرم پوست</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>مرطوب کننده</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>اسپری آب</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>ضدآفتاب</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>مراقبت از مژه و ابرو</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>مراقبت از لب</span>
+                    </a>
+
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <strong>مراقبت از بدن</strong>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>محصولات بانوان</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>شوینده بدن</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>لوسیون بدن</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>کرم دست و پا</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>دئودورانت و خوشبو کننده</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>ضدعفونی کننده</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>روغن بدن</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>ضد درد، سوختگی و التهاب</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>دستمال مرطوب</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>کرم بدن</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>کاپ قاعدگی</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>گوش پاک کن</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>مایع دستشویی</span>
+                    </a>
+
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <strong>بهداشت دهان و دندان</strong>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>مسواک</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>خمیردندان</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>دهانشویه</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>نخ دندان</span>
+                    </a>
+
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <strong>اصلاح صورت و بدن</strong>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>وکس</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>کرم مو بر</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>بعد از اصلاح</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>تیغ اصلاح</span>
+                    </a>
+
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <strong>ست محصولات بهداشتی</strong>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <strong>لوازم جانبی</strong>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>ماسک و لوازم کاربردی</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>ضدعفونی کننده سطوح</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>ابزار مراقبت از پوست</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>اسپا و حمام</span>
+                    </a>
+
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <strong>محصولات پوستی و بهداشتی آقایان</strong>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>اصلاح صورت و بدن</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>مراقبت از صورت و بدن</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>مراقبت مو</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>سایر محصولات بهداشتی آقایان</span>
+                    </a>
+
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <strong>محصولات نوزادان و کودکان</strong>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>سر شیشه و پستانک</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>شیشه شیر و بطری</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>لوازم بهداشتی کودک</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>لوازم جانبی کودک</span>
+                    </a>
+                </div>
+                <div class="third col-12 d-flex flex-wrap align-items-start fw-light visually-hidden" id="submenu3">
+                    <a class="col-2 col-sm-2 text-decoration-none text-black my-2" href="#">
+                        <strong>آرایش صورت</strong>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>کانسیلر</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>کرم پودر</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>پرایمر صورت</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>پودر صورت</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>کانتور و هایلایتر</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>فیکساتور آرایش</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>رژگونه</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>برنزه کننده</span>
+                    </a>
+
+
+                    <a class="col-2 col-sm-2 text-decoration-none text-black my-2" href="#">
+                        <strong>آرایش چشم</strong>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>ریمل</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>پرایمر چشم</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>سایه چشم</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>خط چشم</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>مداد چشم</span>
+                    </a>
+
+
+                    <a class="col-2 col-sm-2 text-decoration-none text-black my-2" href="#">
+                        <strong>آرایش ابرو</strong>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>مداد ابرو</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>سایه ابرو</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>ریمل ابرو</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>ماژیک ابرو</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>ژل ابرو</span>
+                    </a>
+
+
+                    <a class="col-2 col-sm-2 text-decoration-none text-black my-2" href="#">
+                        <strong>آرایش لب</strong>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>پرایمر لب</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>رژ لب</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>رژ لب مایع</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>ماژیک لب</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>مداد لب</span>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>بالم لب</span>
+                    </a>
+
+
+                    <a class="col-2 col-sm-2 text-decoration-none text-black my-2" href="#">
+                        <strong>آرایش لب</strong>
+                    </a>
+                    <a class="col-2 text-decoration-none text-black my-2" href="#">
+                        <span>پرایمر لب</span>
+                    </a>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="products-area col-12 col-sm-12 d-flex flex-wrap justify-content-evenly" id="allProductsSection">
+        <!-- <a class="each col-2 d-flex flex-column align-items-center justify-content-center bg-white p-4 text-decoration-none m-1"
+            href="#">
+            <div class="img">
+                <img class="w-100 p-2" src="assets/img/product-slider-2/1.jpeg" title="" alt="">
+                <div class="badget"></div>
+            </div>
+            <div class="detail d-flex flex-column align-items-center justify-content-center">
+                <p class="title text-black d-inline-block text-truncate mb-3" style="max-width: 175px;">ادوپرفیوم
+                    سوییت ومن زنانه لاریو</p>
+                <del class="old-price"></del>
+                <span class="new-price red mb-2">۱,۲۴۷,۰۰۰ تومان</span>
+                <button class="mx-auto w-75 add-to-basket">افزودن به سبد خرید</button>
+            </div>
+        </a> -->
+    </div>
+    <!--  -->
+    <div class="footer-area col-12 col-sm-12 d-flex flex-row align-items-start p-4">
+        <div class="right col-4 col-sm-4 d-flex flex-column align-items-start p-3">
+            <div class="mb-3">
+                <img src="assets/img/logo.png" class="w-100">
+            </div>
+            <div class="mb-3">
+                <strong class="mb-4">اطلاعات تماس</strong>
+                <p class="mb-2 mt-4">
+                    <strong>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-house-door-fill ms-1" viewBox="0 0 16 16">
+                            <path
+                                d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+                        </svg>بخش اداری:
+                    </strong>
+                    تهران، بلوار ميرداماد، جنب دفينه، بازار بزرگ ميرداماد، ساختمان اداری، ط 4، واحد 412
+                </p>
+                <p class="mb-2">
+                    <strong class="mb-2 mt-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-house-door-fill ms-1" viewBox="0 0 16 16">
+                            <path
+                                d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+                        </svg>
+                        آدرس فروشگاه:
+                    </strong>
+                    <a href="#" class="text-decoration-none text-black">فروشگاه های روژا</a>
+                </p>
+                <p class="mb-2">
+                    <strong class="mb-2 mt-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-envelope-fill ms-1" viewBox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                        </svg>
+                        پست الکترونیکی:
+                    </strong>
+                    online@rojagroup.com
+                </p>
+            </div>
+        </div>
+        <div class="middle col-4 col-sm-4 d-flex flex-column align-items-start p-3 px-4">
+            <strong>زیبا بمانید</strong>
+            <p>
+                مجموعه فروشگاه های روژا با بیش از 25 سال سابقه در ارائه محصولات با کيفيت ، مرغوب و با اصالت از
+                برندهای
+                معتبر جهانی مشغول به فعاليت است. هم اکنون فروشگاه اینترنتی روژا در ادامه اين رسالت و سابقه درخشان،
+                به
+                دنبال ارائه محصولات با کيفيت و اورجينال از برندهای معتبر خارجی و ايرانی در محيط آنلاين است. مشتريان
+                می
+                توانند از ميان هزاران محصول با کيفيت خارجی و داخلی آرایشی، بهداشتی و عطر ، محصول مورد نظر خود را
+                جستجو ،
+                بررسی و انتخاب نمايند. در فروشگاه اینترنتی روژا مشتريان عزیز می توانيد به راحتی، خرید اینترنتی لذت
+                بخش،
+                مطمئن و آسان را تجربه کنند و کالای مورد نظر خود را به سرعت در سراسر ایران دریافت نمایند.
+            </p>
+            <p class="visually-hidden" id="footerMore">
+                فروشگاه اینترنتی روژا مجموعه ای با کیفیت از محصولات آرایشی همچون کرم پودر و پرایمر صورت، کانتور و
+                هایلایت، پنکیک،کانسیلر،رژ گونه،ریمل وخط چشم،سايه چشم ،انواعرژ لب وخط لب،لاک و محصولاتآرایش ناخن از
+                برندهای با کيفيت همچونگرلن،دیور،لانکوم،دبورا،آرت دکو،ایوسن لورن،ام تو بیوتی،کوزارت،رژبزه،ژیوانشی،اين
+                لی،کاپریس،سی گل و صدها برند معتبر ديگر را برای خرید اینترنتی فراهم نموده است. همچنين محصولات مرغوب و با
+                اصالتمراقبت از پوست شامل انواعکرم روز،کرم شب،مرطوب کننده وآبرسان،ضد آفتاب،ضد لک و روشن کننده،ضد
+                چروک،لیفت و سفت کننده،محصولات درمانی جوش،ماسک،کرم دور چشم وکرم های ضد پف و تیرگی دور چشم ومحصولات مراقبت
+                مژه و ابرو،محصولات مراقبت مو شامل مجموعه کاملی از بهترین هایشامپو،ماسک مو،سرم مو از برندهای با
+                کيفيتکدلی،نوکس،فیلورگا،استادرم،نوروا،اوریاژ، ليراک، بایورگا، کامان، سینره و صدها برند معتبر ديگر در
+                فروشگاه اينترنتی روژا موجود می باشد. فروشگاه اینترنتی روژا شامل مجموعه کاملی از انواع عطر و ادکلن های
+                زنانه و ادکلن های مردانه اورجینال از برندهای معتبر
+            </p>
+            <p class="d-flex flex-row align-items-center">
+                <span class="red" id="showMoreFooter">نمایش بیشتر</span>
+                <span class="red" id="showMoreFooter" style="display: none;">نمایش کمتر</span>
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                </svg> -->
+            </p>
+        </div>
+        <div class="left col-4 col-sm-4 d-flex flex-column align-items-start justify-content-start p-3">
+            <div class="top d-flex flex-row justify-content-between col-12 col-sm-12 mb-2">
+                <div class="d-flex flex-column align-items-start col-6 col-sm-6">
+                    <a href="#" class="text-decoration-none text-black my-2">تماس با ما</a>
+                    <a href="#" class="text-decoration-none text-black my-2">درباره ما</a>
+                    <a href="#" class="text-decoration-none text-black my-2">فروشگاه های روژا</a>
+                    <a href="#" class="text-decoration-none text-black my-2">راهنمای سفارش و خرید</a>
+                    <a href="#" class="text-decoration-none text-black my-2">راهنمای استفاده از کارت هدیه</a>
+                </div>
+                <div class="d-flex flex-column align-items-start col-6 col-sm-6">
+                    <a href="#" class="text-decoration-none text-black my-2">حریم خصوصی</a>
+                    <a href="#" class="text-decoration-none text-black my-2">فرصت های شغلی</a>
+                    <a href="#" class="text-decoration-none text-black my-2">قوانین و مقررات</a>
+                    <a href="#" class="text-decoration-none text-black my-2">ارسال هدیه</a>
+                    <a href="#" class="text-decoration-none text-black my-2">سوالات متداول</a>
+                </div>
+            </div>
+            <div class="bottom d-flex flex-row align-items-center justify-content-between">
+                <a class="col-4 col-sm-4 text-decoration-none mx-1">
+                    <img src="assets/img/footer-1.png" class="w-100" style="height: 90px;">
+                </a>
+                <a class="col-4 col-sm-4 text-decoration-none mx-1">
+                    <img src="assets/img/footer-2.png" class="w-100" style="height: 90px;">
+                </a>
+                <a class="col-4 col-sm-4 text-decoration-none mx-1">
+                    <img src="assets/img/footer-3.png" class="w-100" style="height: 90px;">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <script src="assets/script/bootstrap.bundle.min.js"></script>
+    <script src="assets/script/jquery-3.7.1.min.js"></script>
+    <script src="assets/script/products.js"></script>
+    <script src="assets/script/script.js"></script>
+</body>
+
+</html>
