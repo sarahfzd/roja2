@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>روژا شاپ</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/iranyekan">
+    <style>
+        .main {
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        #mobileInput {
+            border: 1px solid #0000000c;
+            border-radius: 5px;
+            background: #f1f1f1;
+        }
+
+        #submitPhoneBtn {
+            border: none;
+            background: #ff0869;
+            border-radius: 5px;
+        }
+
+        #backToHomeBtn {
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main d-flex flex-row mx-0 px-0">
+        <div class="right col-7 position-relative p-5">
+            <div class="d-inline-block">
+                <a href="./home.html" class="text-decoration-none text-black d-flex flex-row align-items-center p-2"
+                    id="backToHomeBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="black"
+                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                    </svg>
+                    <span class="me-2 fs-6">بازگشت</span>
+                </a>
+            </div>
+            <div
+                class="inputs d-flex flex-column align-items-start col-10 mx-auto position-absolute top-50 start-50 translate-middle">
+                <strong class="h6">سلام روژایی عزیز :)</strong>
+                <div class="w-75 mb-4">
+                    <label class="mt-3 mb-0 fs-6" for="mobileInput">لطفا شماره تماس خود را وارد نمایید</label>
+                    <input class="w-75 p-2 mt-2" id="mobileInput" type="tel">
+                </div>
+                <div class="w-75">
+                    <button class="text-white w-75 p-2" id="submitPhoneBtn">ادامه</button>
+                </div>
+            </div>
+        </div>
+        <div class="left col-5">
+            <img src="assets/img/login.jpg" class="h-100">
+        </div>
+    </div>
+
+    <script src="assets/script/script.js"></script>
+    <script src="assets/script/bootstrap.bundle.min.js"></script>
+    <script src="assets/script/jquery-3.7.1.min.js"></script>
+</body>
+
+</html>
