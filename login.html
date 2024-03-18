@@ -32,6 +32,12 @@
             border: 1px solid black;
             border-radius: 5px;
         }
+
+        #codeInput {
+            border: 1px solid #0000000c;
+            border-radius: 5px;
+            background: #f1f1f1;
+        }
     </style>
 </head>
 
@@ -52,23 +58,38 @@
             <div
                 class="inputs d-flex flex-column align-items-start col-10 mx-auto position-absolute top-50 start-50 translate-middle">
                 <strong class="h6">سلام روژایی عزیز :)</strong>
-                <div class="w-75 mb-4">
+                <div class="w-75">
                     <label class="mt-3 mb-0 fs-6" for="mobileInput">لطفا شماره تماس خود را وارد نمایید</label>
                     <input class="w-75 p-2 mt-2" id="mobileInput" type="tel">
                 </div>
+                <div class="wrong-number visually-hidden w-75">
+                    <div class="alert alert-danger w-75 mt-3" role="alert">
+                        لطفا شماره موبایل صحیح وارد کنید
+                    </div>
+                </div>
+                <div class="enter w-75 mb-1 visually-hidden">
+                    <div class="alert alert-success w-75 mt-3" role="alert">
+                        تا لحظاتی دیگر کد ورود برای شما ارسال خواهد شد
+                    </div>
+                    <div class="w-75 mb-2 d-flex flex-column align-items-start">
+                        <label class="mt-3 mb-0 fs-6 w-100" for="codeInput">لطفا کد ارسال شده را وارد کنید</label>
+                        <input class="w-100 p-2 mt-2" id="codeInput">
+                    </div>
+                </div>
                 <div class="w-75">
-                    <button class="text-white w-75 p-2" id="submitPhoneBtn">ادامه</button>
+                    <button class="text-white w-75 p-2 mt-3" id="submitPhoneBtn">ادامه</button>
                 </div>
             </div>
         </div>
         <div class="left col-5">
-            <img src="assets/img/login.jpg" class="h-100">
+            <img src="assets/img/login.jpg" class="h-100 w-100">
         </div>
     </div>
 
-    <script src="assets/script/script.js"></script>
     <script src="assets/script/bootstrap.bundle.min.js"></script>
     <script src="assets/script/jquery-3.7.1.min.js"></script>
+    <script src="assets/script/login.js"></script>
+    <script src="assets/script/script.js"></script>
 </body>
 
 </html>

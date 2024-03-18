@@ -25,6 +25,10 @@ body .header .top .left .basket-btn {
   border-radius: 5px;
   background-color: #f1f1f1;
 }
+body .header .top .left #logedMenu {
+  border: 1px solid #ff0869;
+  border-radius: 5px;
+}
 body .header .top .right .search-input form input {
   background-color: #f1f1f1;
 }
